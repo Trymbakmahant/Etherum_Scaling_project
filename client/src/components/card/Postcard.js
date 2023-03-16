@@ -42,10 +42,11 @@ const PostCard = () => {
             }}
             //   flexDirection="column"
             flexDirection="row"
-            minW="500px"
+            minW="700px"
             alignItems="center"
             maxW="45%"
             position="relative"
+
 
         >
 
