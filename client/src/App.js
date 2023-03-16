@@ -1,10 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Path from "./components/Routes/path";
+import Paths from "./components/routs/Paths";
+import Sidebar from "./components/sidebar/Sidebar";
+import { Flex, Center } from "@chakra-ui/react";
 function App() {
   return (
     <div className="App">
-      <Path />
+      <Flex gap={20}>
+        <Sidebar />
+        <Center>
+          <Paths />
+        </Center>
+      </Flex>
     </div>
   );
 }
