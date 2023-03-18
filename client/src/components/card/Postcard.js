@@ -14,7 +14,7 @@ const PostCard = () => {
     return (<>
         <Box>
 
-
+{/* 
             <button
                 onClick={() => {
                     if (flag) {
@@ -24,7 +24,7 @@ const PostCard = () => {
                     }
                 }}  >
                 'this is for open tha card!'
-            </button>
+            </button> */}
 
         </Box>
         {flag && (<Flex
@@ -132,7 +132,7 @@ const PostCard = () => {
                   
                     <Center>
                  
-                        <Button marginLeft={12}>
+                        <Button marginLeft={12} marginRight={4}>
                             Join
                         </Button>
 
