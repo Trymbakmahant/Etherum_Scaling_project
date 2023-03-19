@@ -1,48 +1,27 @@
-// The below import defines which components come from formik
-import { Field, Form, Formik } from "formik";
+import { Polybase } from "@polybase/client";
 
-function FormikExample() {
-  function validateName(value) {
-    let error;
-    if (!value) {
-      error = "Name is required";
-    } else if (value.toLowerCase() !== "naruto") {
-      error = "Jeez! You're not a fan 😱";
-    }
-    return error;
+import { useRef } from "react";
+
+const db = new Polybase({
+  defaultNamespace:
+    "pk/0xbbc1ff78605c9f8c178d474e3d66aca2512b2d59838fac927f23320f5b101fca1b7ed14f387e0ff09a0ded2f6468be24f87e23328a472e7692ae25dae8d4f120/PRACTICE",
+});
+
+export default function App() {
+  const polltopic = useRef();
+  const poll1 = useRef();
+  const poll2 = useRef();
+
+  const collectionReference = db.collection("User");
+  async function createRecord() {
+    // .create(args) args array is defined by the constructor fn
+    const recordData = await collectionReference.create([
+      "new-york",
+      "heomewhog",
+    ]);
+
+    console.log(recordData);
   }
 
-  return (
-    <Formik
-      initialValues={{ name: "Sasuke" }}
-      onSubmit={(values, actions) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-        }, 1000);
-      }}
-    >
-      {(props) => (
-        <Form>
-          <Field name="name" validate={validateName}>
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.name && form.touched.name}>
-                <FormLabel>First name</FormLabel>
-                <Input {...field} placeholder="name" />
-                <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
-          <Button
-            mt={4}
-            colorScheme="teal"
-            isLoading={props.isSubmitting}
-            type="submit"
-          >
-            Submit
-          </Button>
-        </Form>
-      )}
-    </Formik>
-  );
+  return <div></div>;
 }

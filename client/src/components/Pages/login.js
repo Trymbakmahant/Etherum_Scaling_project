@@ -1,5 +1,5 @@
 import { Polybase } from "@polybase/client";
-
+import { Button, ButtonGroup, Center, Box } from "@chakra-ui/react";
 import { useRef } from "react";
 
 const db = new Polybase({
@@ -13,8 +13,10 @@ export default function App() {
   const poll2 = useRef();
 
   const collectionReference = db.collection("User");
-  async function createRecord() {
-    // .create(args) args array is defined by the constructor fn
+  const PollonReference = db.collection("Poll");
+
+  //this function helps to upload data of the user
+  async function UploadprofileData() {
     const recordData = await collectionReference.create([
       "new-york",
       "heomewhog",
@@ -23,5 +25,44 @@ export default function App() {
     console.log(recordData);
   }
 
-  return <div></div>;
+  // this helps to list all the  poll which is till now uploaded
+  async function listRecords() {
+    const records = await PollonReference.get();
+    console.log(records);
+  }
+
+  //this helps retriving data of the user
+  async function RetriveProfileData() {
+    const { data, block } = await collectionReference.record("new-york").get();
+    console.log(block);
+  }
+
+  return (
+    <Center>
+      <Box mr={4}>
+        <Button onClick={UploadprofileData}>click to upload data</Button>
+      </Box>
+      <Box mr={4}>
+        <Button onClick={RetriveProfileData}>click to retrive data</Button>
+      </Box>
+      <Box mr={4}>
+        {" "}
+        <Button>click to upload your poll</Button>
+      </Box>{" "}
+      <Box mr={4}>
+        <Button>click to retrive all content of your poll </Button>
+      </Box>
+      <Box>
+        {" "}
+        <Button onClick={listRecords}>click to upload all polls</Button>
+      </Box>
+    </Center>
+  );
 }
+
+// upload data
+// profileimage  profilename  profilefollower
+// retrive the uperdata
+
+// upload polls
+// topic  choise1 choise 2 choise3   likes
