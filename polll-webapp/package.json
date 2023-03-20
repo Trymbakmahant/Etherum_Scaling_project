@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.12.1",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.269",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "ethers": "^6.1.0",
