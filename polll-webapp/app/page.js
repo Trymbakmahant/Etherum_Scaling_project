@@ -13,7 +13,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.txt}>
         <p className={fonta.className}>Polll</p>
-      <Link href="/polls">
+      <Link href="/Postcard">
         click
        </Link>
       </div>
