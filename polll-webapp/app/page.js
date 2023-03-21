@@ -1,15 +1,35 @@
-import Image from "next/image";
-import { Rubik_80s_Fade } from "next/font/google";
-import styles from "./page.module.css";
+"use client";
+import styles from "./page.module.scss";
+import Link from "next/link";
+import Spline from "@splinetool/react-spline";
 
-const fonta = Rubik_80s_Fade({ subsets: ["latin"], weight: "400" });
+function connectUser() {
+  console.log("Connect");
+}
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.txt}>
-        <p className={fonta.className}>Polll</p>
+    <>
+      <div className={styles.container}>
+        <div className={styles.nav}>
+          <div className={styles.left}>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className={styles.right}>
+            <div className={styles.logo}>
+              <Spline scene="https://prod.spline.design/ZNMxunX1ikfomgqv/scene.splinecode" />
+            </div>
+            <div className={styles.menu}>
+              <p>Menu</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.header}>
+          <div onClick={() => connectUser()} className={styles.loginBtn}>
+            Get Started
+          </div>
+        </div>
       </div>
-    </main>
+    </>
   );
 }
