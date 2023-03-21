@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@polybase/client": "^0.3.37",
     "@rainbow-me/rainbowkit": "^0.12.2",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.269",

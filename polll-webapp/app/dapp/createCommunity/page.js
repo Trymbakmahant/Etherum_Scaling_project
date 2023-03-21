@@ -1,5 +1,5 @@
 "use client";
-import style from "./page.module.css";
+import style from "./create.module.scss";
 import { Polybase } from "@polybase/client";
 import { useRef } from "react";
 const db = new Polybase({
