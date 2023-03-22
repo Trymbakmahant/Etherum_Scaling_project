@@ -28,6 +28,11 @@ export default function Home() {
           <div onClick={() => connectUser()} className={styles.loginBtn}>
             Get Started
           </div>
+          <div >
+            <Link href="/Postcard">
+            </Link>
+            click me 
+          </div>
         </div>
       </div>
     </>
