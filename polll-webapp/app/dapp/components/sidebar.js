@@ -39,7 +39,7 @@ export default function Sidebar() {
             whileTap={{ scale: 0.9 }}
             className={styles.navitem}
           >
-            <Link href={"/dapp/create/createCommunity"}>Create Community</Link>
+            <Link href={"/dapp/create/createcommunity"}>Create</Link>
           </motion.div>
           <motion.div
             initial={{ y: "100%", opacity: 0 }}

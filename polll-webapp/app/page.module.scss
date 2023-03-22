@@ -1,6 +1,7 @@
 .container {
   width: 100vw;
   height: 100vh;
+
   .nav {
     margin-top: 10px;
     padding: 0 10px;
@@ -9,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .left {
       width: 20%;
       height: 100%;
@@ -16,11 +18,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      > p {
+
+      >p {
         font-size: 1.2rem;
         color: white;
       }
     }
+
     .right {
       width: 80%;
       height: 100%;
@@ -31,24 +35,39 @@
       // overflow: hidden;
       background-color: white;
       border-radius: 10px;
+
       .logo {
         width: 10%;
         height: 100%;
       }
     }
   }
+
   .header {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .loginBtn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
       width: fit-content;
       height: fit-content;
-      padding: 1rem;
+      padding: 1rem 2rem;
       background-color: #fff;
       color: black;
       font-size: 2rem;
       border-radius: 10px;
+      transition: 200ms;
+
+      &:hover {
+        padding-left: 3rem;
+        background-color: #82d5ee;
+      }
+
+      &:active {
+        scale: 0.9;
+      }
     }
   }
 }

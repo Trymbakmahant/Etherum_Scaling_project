@@ -1,13 +1,23 @@
 "use client";
-import styles from "./page.module.scss";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Spline from "@splinetool/react-spline";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
 
-function connectUser() {
-  console.log("Connect");
-}
+import styles from "./page.module.scss";
 
 export default function Home() {
+  const router = useRouter();
+  const { address, isDisconnected, isConnected } = useAccount();
+
+  useEffect(() => {
+    if (isConnected) {
+      router.push("/dapp");
+    }
+  }, [address]);
+
   return (
     <>
       <div className={styles.container}>
@@ -25,9 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.header}>
-          <div onClick={() => connectUser()} className={styles.loginBtn}>
-            Get Started
-          </div>
+          <ConnectButton />
         </div>
       </div>
     </>
