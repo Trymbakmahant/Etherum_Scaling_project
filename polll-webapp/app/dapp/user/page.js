@@ -12,7 +12,7 @@ export default function UserPage() {
     <>
       <div className={styles.wraper}>
         <p>User Page</p>
-        <p>👑{address}👑</p>
+        <p>👑{address.length > 0 && address}👑</p>
       </div>
     </>
   );
