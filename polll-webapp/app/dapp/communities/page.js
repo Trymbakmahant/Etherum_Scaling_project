@@ -29,16 +29,13 @@ const page = () => {
   }, [data]);
   return (
     <div className={style.wraper}>
-      <div className={style.card}>
-        {isDataLoaded &&
-          data.map((item) => {
-            return (
-              <div key={item.data.id}>
-                <p>{item.data.name}</p>
-              </div>
-            );
-          })}
-      </div>
+      {/* {console.log("consaole.llgohfiwoehjwo")}
+      {alldata.length > 0 &&
+        alldata.map((post) => {
+          console.log("hello bhai sahab");
+          return <p> {post.data.name}</p>;
+        })} */}
+      <p>{data && data[0].data}</p>
     </div>
   );
 };
