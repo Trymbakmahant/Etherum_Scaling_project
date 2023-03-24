@@ -8,13 +8,8 @@
     background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -15px -15px 30px rgb(60, 60, 60);
-    // position: relative;
-    // padding: 1.8rem;
-
-    // transition: 0.5s ease-out;
-    // overflow: visible;
-   }
-   
+  
+}
 
 .img{
     height: 90px;
@@ -102,3 +97,79 @@
 .upvote{
     place-items: center;
 }
+.comments{
+    display: grid;
+    grid-auto-flow: column;
+    
+    place-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.Commentcard {
+    width: 80vh;
+    
+    color: white;
+    height: auto;
+   margin-left: 10vh;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background: #212121;
+ box-shadow: 15px 15px 30px rgb(25, 25, 25),
+             -15px -15px 30px rgb(60, 60, 60);
+   
+   }
+
+   .input {
+  
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 20px;
+    width:70vh;
+  
+    background: #e8e8e8;
+
+    transition: 0.3s;
+
+   }
+   
+   .input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+
+    transition: 0.3s;
+   }
+   
+   .inputdiv{
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+
+   }
+   .shadow__btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+  
+  .shadow__btn {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }
