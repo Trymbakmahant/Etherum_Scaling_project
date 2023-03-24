@@ -11,8 +11,8 @@ export default function CreatorPage() {
     <>
       <div className={styles.wraper}>
         <p>Creation Area 🚧</p>
-        <Link href={"/createpost"}>Create Post</Link>
-        <Link href={"/createcommunity"}>Create Commu</Link>
+        <Link href={"/create/createpost"}>Create Post</Link>
+        <Link href={"/create/createcommunity"}>Create Commu</Link>
       </div>
     </>
   );
