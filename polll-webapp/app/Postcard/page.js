@@ -84,6 +84,16 @@ const Postcard = () => {
     
                 
                 
+                </div >
+                <div     className={styles.comments
+                }
+>
+
+                <img className={styles.img} src='https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg'></img>
+                <div>
+                    thsi is a comment section ...
+                </div>
+                    
                 </div>
                
                 
