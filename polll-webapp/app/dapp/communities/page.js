@@ -35,7 +35,7 @@ const page = () => {
           console.log("hello bhai sahab");
           return <p> {post.data.name}</p>;
         })} */}
-      <p>{data && data[0].data}</p>
+      {/* <p>{data && data[0].data}</p> */}
     </div>
   );
 };
