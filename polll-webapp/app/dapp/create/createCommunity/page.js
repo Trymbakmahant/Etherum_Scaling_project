@@ -2,6 +2,7 @@
 import style from "./create.module.scss";
 import { Polybase } from "@polybase/client";
 import { useRef } from "react";
+import { useAccount } from "wagmi";
 const db = new Polybase({
   defaultNamespace:
     "pk/0xbbc1ff78605c9f8c178d474e3d66aca2512b2d59838fac927f23320f5b101fca1b7ed14f387e0ff09a0ded2f6468be24f87e23328a472e7692ae25dae8d4f120/PRACTICE",
@@ -9,11 +10,12 @@ const db = new Polybase({
 
 const Communities = db.collection("Communities");
 function Page() {
+  const { address } = useAccount();
   const name = useRef("");
   const profilepic = useRef("");
   const background = useRef("");
   const tagline = useRef("");
-
+  const Owner = [address];
   async function handleSubmit() {
     try {
       console.log(name.current.value);
@@ -23,6 +25,7 @@ function Page() {
         profilepic.current.value,
         background.current.value,
         tagline.current.value,
+        Owner,
       ]);
 
       console.log(recordData);

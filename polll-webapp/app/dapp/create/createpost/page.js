@@ -7,7 +7,7 @@ const db = new Polybase({
     "pk/0xbbc1ff78605c9f8c178d474e3d66aca2512b2d59838fac927f23320f5b101fca1b7ed14f387e0ff09a0ded2f6468be24f87e23328a472e7692ae25dae8d4f120/PRACTICE",
 });
 
-const Communities = db.collection("Communities");
+const Communities = db.collection("Post");
 function Page() {
   const inputArr = [
     {
