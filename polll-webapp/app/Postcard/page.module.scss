@@ -102,3 +102,7 @@
 .upvote{
     place-items: center;
 }
+.comments{
+    display: flex;
+    flex-direction: column;
+}
