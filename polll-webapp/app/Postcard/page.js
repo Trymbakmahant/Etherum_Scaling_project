@@ -2,13 +2,14 @@
 import styles from './page.module.scss'
 import { BiUpvote } from "react-icons/bi"
 import { BiDownvote } from "react-icons/bi"
-import{FaRegCommentAlt} from "react-icons/fa"
-import {IoMdShareAlt} from "react-icons/io"
+import { FaRegCommentAlt } from "react-icons/fa"
+import { IoMdShareAlt } from "react-icons/io"
 import { useState } from 'react';
 const Postcard = () => {
-    
-    const [flag,setFlag] = useState(false);
-    const [upvote,setupvote] = useState(0);
+
+    const [flag, setFlag] = useState(false);
+    const [commentflag, setcommentflag] = useState(false);
+    const [upvote, setupvote] = useState(0);
     var upvoteCounter = upvote;
     return (<>
 
@@ -18,16 +19,16 @@ const Postcard = () => {
 
 
                 <div className={styles.upvote}>
-                    <BiUpvote size={30} onClick={()=>{
-                        upvoteCounter +=1;
+                    <BiUpvote size={30} onClick={() => {
+                        upvoteCounter += 1;
                         setupvote(upvoteCounter);
                     }} />
-                    <div 
+                    <div
                     >
-                       {upvote}
+                        {upvote}
                     </div>
-                    <BiDownvote size={30} onClick={()=>{
-                        upvoteCounter -=1;
+                    <BiDownvote size={30} onClick={() => {
+                        upvoteCounter -= 1;
                         setupvote(upvoteCounter);
                     }} />
                 </div>
@@ -45,58 +46,84 @@ const Postcard = () => {
                     </div>
                     <div>
                         <button className={styles.btn} onClick={
-                        ()=>{
-                            if(flag){
-                                setFlag(false)
-                            }else{
-                                setFlag(true)
+                            () => {
+                                if (flag) {
+                                    setFlag(false)
+                                } else {
+                                    setFlag(true)
+                                }
                             }
-                        }
                         }>
-                            {flag?"joined":"join"}
+                            {flag ? "joined" : "join"}
                         </button>
                     </div>
 
 
                 </div>
-             
+
 
             </div>
             <div>
-                    <img src='https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg ' style={{height
-                :"400px",width:"600px",placeItems:"center" ,marginLeft:"80px", marginTop:"20px" }}>
+                <img src='https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg ' style={{
+                    height
+                        : "400px", width: "600px", placeItems: "center", marginLeft: "80px", marginTop: "20px"
+                }}>
 
-                    </img>
-                   
-                </div>
-                <div className={styles.comment}>
-                    
-                    
-                <FaRegCommentAlt  size={30} />
-                 
+                </img>
+
+            </div>
+            <div className={styles.comment}>
+
+
+                <FaRegCommentAlt size={30} onClick={
+                            () => {
+                                if (flag) {
+                                    setcommentflag(false)
+                                } else {
+                                    setcommentflag(true)
+                                }
+                            }} />
+
                 <div className={styles.share}>
-                    
-                    <IoMdShareAlt  size={30}/>
-                 
-                    
-                    
-                    </div>
-    
-                
-                
-                </div >
-                <div     className={styles.comments
-                }
->
 
-                <img className={styles.img} src='https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg'></img>
-                <div>
-                    thsi is a comment section ...
+                    <IoMdShareAlt size={30} />
+
+
+
                 </div>
-                    
+
+
+
+
+            </div >
+           { commentflag&&<div>
+
+           
+
+           <div className={styles.inputdiv}>
+
+                <input className={styles.input} placeholder="Type here..."></input>
+                <div className={styles.shadow__btn}>
+                    make comment
+
                 </div>
-               
-                
+
+            </div>
+            <div className={styles.Commentcard}>
+
+                <div className={styles.comments}>
+
+                    <img className={styles.img} src='https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg'></img>
+                    <div>
+                        this is a comment section ...
+                    </div>
+
+                </div>
+
+            </div>
+            </div>}
+
+
         </div>
 
 
