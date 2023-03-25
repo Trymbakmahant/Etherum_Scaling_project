@@ -21,6 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-poll": "^0.0.2",
+    "react-polls": "^1.2.0",
     "recoil": "^0.7.7",
     "sass": "^1.59.3",
     "wagmi": "^0.12.3"
