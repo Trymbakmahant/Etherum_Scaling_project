@@ -1,9 +1,10 @@
 .card {
     width: 100vh;
-    
+    place-items: center;
     color: white;
     height: auto;
-    min-height: 70vh;
+    margin-left: 120px;
+    min-width: 50rem;
     border-radius: 20px;
     background: #212121;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -24,7 +25,7 @@
 }
 .component{
     display: flex;
-    place-items: center;
+
     flex-direction: row;
     margin-left: 20px;
     
@@ -32,6 +33,7 @@
 }
 .components{display: flex;
   flex-flow: row-reverse;
+  margin-top: 20px;
     }
 
 
@@ -172,4 +174,72 @@
                 0 0 25px rgb(0,140,255),
                 0 0 50px rgb(0,140,255),
                 0 0 100px rgb(0,140,255);
+  }
+
+
+
+  .polloption{
+    padding: 4px 10px ;
+    width: 60vh;
+    height : 30px;
+     margin-left: 120px;
+     margin-top: 20px;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 2px;
+  }
+
+  .pollquestion{
+    font-size: x-large;
+
+    margin-left: 120px;
+    margin-top: 20px;
+  }
+   
+  .aligncomponent{
+    display: grid;
+    grid-template-columns: 10vh 90vh;
+  }
+
+  #option1{
+    padding: 4px 10px ;
+    width: 60vh;
+    height : 30px;
+     margin-left: 120px;
+     margin-top: 20px;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 2px;
+  }
+  #option2{
+    padding: 4px 10px ;
+    width: 60vh;
+    height : 30px;
+     margin-left: 120px;
+     margin-top: 20px;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 2px;
+  }
+  #option3{
+    padding: 4px 10px ;
+    width: 60vh;
+    height : 30px;
+     margin-left: 120px;
+     margin-top: 20px;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 2px;
   }
