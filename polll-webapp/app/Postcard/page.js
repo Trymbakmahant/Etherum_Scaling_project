@@ -22,7 +22,7 @@ const Postcard = () => {
     const pollAnswers = [
       { option: 'Yes', votes: 3},
       { option: 'No', votes: 2 },
-      { option: 'm', votes: 2 },
+      { option: 'boath', votes: 2 },
    
     ]
     
@@ -35,7 +35,7 @@ const Postcard = () => {
         console.log("hey")
    
       
-        const newPollAnswers = pollAnswers.map(answer => {
+        const newPollAnswers = pollAnswers.map((answer) => {
           if (answer.option === voteAnswer) answer.votes++;
           return answer;
         })
@@ -83,7 +83,7 @@ const Postcard = () => {
                 </div>
                 <div>
                 <div>
-                <div className={styles.component}>
+                <div className={styles.components}>
 
                     <img className={styles.img} src='https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg'></img>
                     <div style={{ marginLeft: "30px" }}>
@@ -147,9 +147,7 @@ const Postcard = () => {
 
 
             </div >
-             <div className={styles.pollquestion}>
-                what is your option?
-             </div>
+            
             <Poll question={pollQuestion} answers={pollAnswers} customStyles={{theme:'white',questionColor:"#fff"}} onVote={handleVote} />
 
             {/* <div>
@@ -182,9 +180,9 @@ const Postcard = () => {
                 </div>
             </div>
              */}
-            {commentflag && (<div>
+            { (<div>
 
-
+              {/* commentflag && */}
 
                 <div className={styles.inputdiv}>
 
