@@ -80,57 +80,72 @@ function Page() {
     console.log(data);
   }
   return (
-    <div className={style.center}>
-      <h1>Create Post</h1>
-      <form>
-        <div className={style.inputbox}>
-          <input type="text" ref={name} required="required" />
-          <span>Title</span>
-        </div>
-        <div className={style.inputbox}>
-          <input type="text" ref={profilepic} required="required" />
-          <span>Image</span>
-        </div>
-
-        <div>
-          {" "}
-          {arr.map((item, i) => {
-            return (
-              <div className={style.addInput}>
-                {" "}
-                <input
-                  onChange={handleChange}
-                  value={item.value}
-                  id={i}
-                  type={item.type}
-                  placeholder={`poll ${item.count + 1}`}
-                  size="40"
-                />
+    <div className={style.centerFrame}>
+      <div className={style.center}>
+        <h1>Create Post</h1>
+        <div className={style.gridcontainer}>
+          <div className={style.item2}>
+            {" "}
+            <form>
+              <div className={style.inputbox}>
+                <input type="text" ref={name} required="required" />
+                <span>Title</span>
               </div>
-            );
-          })}
+              <div className={style.inputbox}>
+                <input type="text" ref={profilepic} required="required" />
+                <span>Image</span>
+              </div>
+
+              <div>
+                {" "}
+                {arr.map((item, i) => {
+                  return (
+                    <div className={style.addInput}>
+                      {" "}
+                      <input
+                        onChange={handleChange}
+                        value={item.value}
+                        id={i}
+                        type={item.type}
+                        placeholder={`poll ${item.count + 1}`}
+                        size="40"
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </form>
+          </div>
+          <div className={style.item3}>
+            <div className={style.button} onClick={addInput}>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+                  ></path>
+                </svg>{" "}
+                Add Poll
+              </span>
+            </div>
+
+            {/* <div className={style.inputbox}>
+              <input type="button" onClick={handleSubmit} value="submit" />
+            </div> */}
+          </div>
+          <div className={style.item5}>
+            <div className={style.button} onClick={handleSubmit}>
+              <div className={style.addcolor}>Submit</div>
+            </div>
+          </div>
         </div>
-        <div className={style.buttonis}>
-          <button type="button" onClick={addInput}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
-              <path fill="none" d="M0 0h24v24H0z"></path>
-              <path
-                fill="currentColor"
-                d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
-              ></path>
-            </svg>{" "}
-            Add Polls
-          </button>
-        </div>
-        <div className={style.inputbox}>
-          <input type="button" onClick={handleSubmit} value="submit" />
-        </div>
-      </form>
+      </div>
     </div>
   );
 }

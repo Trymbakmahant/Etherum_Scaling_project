@@ -18,13 +18,17 @@ export default function UserPage() {
   const User = db.collection("User");
 
   async function GetRecord() {
-    const records = await User.record(address).get();
+    try {
+      const records = await User.where("id", "==", address).get();
 
-    if (records.data.length == 0) {
-      setFlag(true);
+      if (records.data.length == 0) {
+        setFlag(true);
+      }
+      setUseris(records.data);
+      console.log(records.data);
+    } catch (e) {
+      console.log(e);
     }
-    setUseris(records.data);
-    console.log(records.data);
   }
 
   useEffect(() => {

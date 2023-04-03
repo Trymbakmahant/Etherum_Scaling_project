@@ -12,6 +12,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
 
+.centerFrame {
+  margin: auto;
+  width: 50%;
+  border: 1px solid green;
+  padding: 10px;
+}
 .center {
   position: relative;
   padding: 50px 50px;
@@ -118,4 +124,65 @@
   align-items: center;
   color: #fff;
   font-weight: 600;
+}
+
+.gridcontainer {
+  display: grid;
+
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  background-color: #fff;
+  padding: 20px;
+  width: 50%;
+}
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  margin-right: 150px;
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.center .griditem {
+  text-align: center;
+}
+
+.button {
+  border: 2px solid #24b4fb;
+  background-color: #24b4fb;
+  border-radius: 0.9em;
+  padding: 0.8em 0.3em 0.2em 0.4em;
+
+  transition: all ease-in-out 0.2s;
+  font-size: 16px;
+}
+
+.addcolor {
+  color: #fff;
+  text-align: center;
+}
+
+.button span {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #0071e2;
 }

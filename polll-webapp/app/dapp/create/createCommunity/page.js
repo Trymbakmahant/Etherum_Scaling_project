@@ -39,32 +39,30 @@ function Page() {
     console.log(data);
   }
   return (
-    <div className={style.center}>
-      <h1>Create your Community</h1>
-      <form>
-        <div className={style.inputbox}>
-          <input type="text" ref={name} required="required" />
-          <span>Community Name</span>
-        </div>
-        <div className={style.inputbox}>
-          <input type="text" ref={profilepic} required="required" />
-          <span>Profile Picture</span>
-        </div>
-        <div className={style.inputbox}>
-          <input type="text" ref={background} required="required" />
-          <span>Background Picture</span>
-        </div>
-        <div className={style.inputbox}>
-          <input type="text" ref={tagline} required="required" />
-          <span>tagline</span>
-        </div>
-        <div className={style.inputbox}>
-          <input type="button" onClick={handleSubmit} value="submit" />
-        </div>
-      </form>
-
-      <div>
-        <button onClick={getRecord}>click to get data</button>
+    <div className={style.centerFrame}>
+      <div className={style.center}>
+        <h1>Create your Community</h1>
+        <form>
+          <div className={style.inputbox}>
+            <input type="text" ref={name} required="required" />
+            <span>Community Name</span>
+          </div>
+          <div className={style.inputbox}>
+            <input type="text" ref={profilepic} required="required" />
+            <span>Profile Picture</span>
+          </div>
+          <div className={style.inputbox}>
+            <input type="text" ref={background} required="required" />
+            <span>Background Picture</span>
+          </div>
+          <div className={style.inputbox}>
+            <input type="text" ref={tagline} required="required" />
+            <span>tagline</span>
+          </div>
+          <div className={style.inputbox}>
+            <input type="button" onClick={handleSubmit} value="submit" />
+          </div>
+        </form>
       </div>
     </div>
   );

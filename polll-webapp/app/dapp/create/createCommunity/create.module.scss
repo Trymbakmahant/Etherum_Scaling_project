@@ -12,6 +12,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
 
+.centerFrame {
+  margin: auto;
+  width: 50%;
+  border: 1px solid green;
+  padding: 10px;
+}
 .center {
   position: relative;
   padding: 50px 50px;
